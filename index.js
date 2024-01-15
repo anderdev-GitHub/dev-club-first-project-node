@@ -2,7 +2,6 @@ import express from "express";
 import { v4 } from "uuid";
 import cors from "cors";
 
-const port = 3001;
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -21,6 +20,8 @@ app.use(cors());
 
         - Middleware => INTERCEPTADOR => Tem o poder de parar ou alterar dados de requisição
  */
+
+const port = process.env.PORT || 3001;
 
 const users = [];
 
